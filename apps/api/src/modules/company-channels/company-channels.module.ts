@@ -1,0 +1,1 @@
+/* Module: company-channels - Definicion del modulo NestJS (wiring de application/infrastructure/presentation). A implementar. */

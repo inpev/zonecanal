@@ -1,0 +1,12 @@
+/*
+ * Design tokens - Índice.
+ * Importar aquí todos los tokens base.
+ */
+
+@import "./colors.css";
+@import "./spacing.css";
+@import "./typography.css";
+@import "./radius.css";
+@import "./shadows.css";
+@import "./motion.css";
+@import "./layout.css";

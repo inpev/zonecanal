@@ -1,0 +1,77 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.dot {
+  width: var(--space-2-5);
+  height: var(--space-2-5);
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-300);
+  flex-shrink: 0;
+}
+
+.dotLoading {
+  background-color: var(--color-warning);
+  animation: api-status-pulse var(--duration-slow) var(--ease-in-out) infinite;
+}
+
+.dotConnected {
+  background-color: var(--color-success);
+}
+
+.dotError {
+  background-color: var(--color-danger);
+}
+
+.label {
+  font-weight: var(--font-weight-medium);
+}
+
+.detail {
+  color: var(--color-text-muted);
+}
+
+.retry {
+  margin-left: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-fg);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.retry:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-border-strong);
+}
+
+.retry:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@keyframes api-status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dotLoading {
+    animation: none;
+  }
+}

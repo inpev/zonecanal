@@ -1,0 +1,1 @@
+/* @zonecanal/schemas - Paquete compartido. Indice publico a llenar al implementar contratos. */

@@ -1,0 +1,1 @@
+/* @zonecanal/security - Paquete compartido. Indice publico a llenar al implementar contratos. */
