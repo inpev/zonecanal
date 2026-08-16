@@ -1,7 +1,13 @@
 import "reflect-metadata";
+import { existsSync } from "node:fs";
+import { loadEnvFile } from "node:process";
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
 import { getAppConfig } from "./config";
+
+if (existsSync(".env")) {
+  loadEnvFile(".env");
+}
 
 async function bootstrap(): Promise<void> {
   const config = getAppConfig();
