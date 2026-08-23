@@ -11,16 +11,13 @@ Reglas globales para agentes que trabajen en este repositorio.
 
 ## Reglas de arquitectura
 
-- No hardcodear colores: los colores y estilos se manejan mediante Design Tokens (`apps/web/src/styles/tokens`).
+- Mantener el flujo frontend unidireccional: Page → Components → Hooks → Services → API → Backend.
 - No colocar URLs de API en componentes: la comunicación con APIs vive en `services` / `shared/api`.
 - No poner lógica de negocio en páginas: las páginas deben ser delgadas.
-- No crear componentes gigantes: preferir composición y componentes pequeños y cohesivos.
 - Usar `features/` y `modules/` por dominio; nunca arquitectura plana.
 - Mantener tipado estricto (TypeScript strict).
 - No usar `eslint-disable` salvo caso absolutamente excepcional y documentado.
 - No usar `any` salvo caso absolutamente excepcional y documentado.
-- Hooks encapsulan comportamiento reutilizable.
-- Services encapsulan la comunicación con APIs.
 - El backend es la autoridad de las reglas de negocio.
 - Server State y Client State deben estar separados.
 - Feature Flags para funcionalidades progresivas.
@@ -29,8 +26,18 @@ Reglas globales para agentes que trabajen en este repositorio.
 - No duplicar contratos entre frontend, backend y mobile: usar `packages/contracts`, `packages/schemas`, `packages/types`.
 - Mantener bajo acoplamiento y alta cohesión.
 - Preferir composición sobre duplicación.
+- No crear abstracciones innecesarias.
 - Crear nuevos dominios únicamente cuando tengan responsabilidad real.
 - Mobile First.
+
+## Reglas de UI
+
+- Design Tokens y variables globales son la única fuente de verdad para colores, temas, tipografías, tamaños de texto, spacing, radius, sombras, motion y demás valores visuales reutilizables (`apps/web/src/styles/tokens`).
+- No hardcodear valores visuales reutilizables dentro de componentes.
+- La arquitectura visual debe permitir cambiar temas, identidad temporal, festividades o campañas comerciales globalmente sin modificar los componentes.
+- Centralizar textos reutilizables de interfaz cuando corresponda y mantener la estructura preparada para futura internacionalización.
+- Componentes pequeños, cohesivos y reutilizables; hooks encapsulan comportamiento reutilizable; services encapsulan la comunicación con APIs.
+- Accesibilidad como requisito en toda la interfaz.
 
 ## Workspace
 

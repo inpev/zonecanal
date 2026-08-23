@@ -1,0 +1,21 @@
+/*
+ * Capa de campañas temporales (overrides visuales).
+ *
+ * Convención:
+ * - Se activan con atributo [data-campaign="<nombre>"] en <html> o <body>.
+ * - Solo sobrescriben tokens semánticos de identidad temporal
+ *   (accent, sale, primary, background, etc.), nunca tokens primitivos.
+ * - Se importan DESPUÉS de los temas base para poder sobrescribirlos.
+ * - La identidad permanente vive en themes/light.css y themes/dark.css.
+ *
+ * Ejemplo (inactivo):
+ *
+ * [data-campaign="black-friday"] {
+ *   --color-accent: var(--color-black);
+ *   --color-sale: var(--color-red-600);
+ * }
+ *
+ * [data-campaign="christmas"] {
+ *   --color-accent: var(--color-red-600);
+ * }
+ */

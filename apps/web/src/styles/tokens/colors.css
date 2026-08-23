@@ -1,14 +1,17 @@
 /*
  * Design tokens - Colores.
- * Primitivos: paleta técnica base.
+ * Primitivos: paleta técnica base de ZoneCanal.
  * Semánticos: se definen en themes/ y hacen referencia a primitivos.
  * Regla: componente -> token semántico -> token primitivo.
  */
 
 :root {
-  /* ----- Primitivos: escala de grises ----- */
+  /* ----- Primitivos: neutrales ----- */
   --color-white: #ffffff;
   --color-black: #0d0d0f;
+
+  /* Fondo claro oficial de marca */
+  --color-canvas: #f4f7fa;
 
   --color-gray-50: #f8f8f9;
   --color-gray-100: #f1f1f3;
@@ -22,18 +25,48 @@
   --color-gray-900: #1c1c22;
   --color-gray-950: #121217;
 
-  /* ----- Primitivos: marca (sustituible) ----- */
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
+  /* ----- Primitivos: marca - azules oficiales -----
+   * Paradas oficiales: 400 azul claro, 600 azul profundo, 800 azul noche.
+   */
+  --color-brand-50: #f0f5fa;
+  --color-brand-100: #dce7f2;
+  --color-brand-200: #b9cfe6;
+  --color-brand-300: #8fb5d8;
+  --color-brand-400: #5e8fc2;
+  --color-brand-500: #35699f;
+  --color-brand-600: #0a3d78;
+  --color-brand-700: #093464;
+  --color-brand-800: #072a52;
+  --color-brand-900: #051f3d;
+  --color-brand-950: #031428;
+
+  /* ----- Primitivos: acento - naranja energía -----
+   * Parada oficial: 500.
+   */
+  --color-accent-50: #fef5eb;
+  --color-accent-100: #fde8d2;
+  --color-accent-200: #fbd1a5;
+  --color-accent-300: #f8b472;
+  --color-accent-400: #f59f4b;
+  --color-accent-500: #f28c28;
+  --color-accent-600: #db7413;
+  --color-accent-700: #b55c0e;
+  --color-accent-800: #8f480a;
+  --color-accent-900: #693607;
+
+  /* ----- Primitivos: turquesa -----
+   * Parada oficial: 500.
+   */
+  --color-teal-50: #e6f8f8;
+  --color-teal-100: #c2eeee;
+  --color-teal-200: #8adddd;
+  --color-teal-300: #45cccc;
+  --color-teal-400: #14c0c0;
+  --color-teal-500: #00b4b4;
+  --color-teal-600: #009393;
+  --color-teal-700: #007373;
+  --color-teal-800: #005252;
+  --color-teal-900: #003131;
 
   /* ----- Primitivos: funcionales ----- */
   --color-red-200: #fecaca;

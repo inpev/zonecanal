@@ -41,4 +41,16 @@
   --letter-spacing-tight: -0.01em;
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.02em;
+
+  /* ----- Tamaños de texto semánticos -----
+   * Los componentes consumen estos alias, nunca la escala numérica directa.
+   */
+  --font-size-caption: var(--font-size-xs);
+  --font-size-badge: var(--font-size-xs);
+  --font-size-nav: var(--font-size-sm);
+  --font-size-button: var(--font-size-sm);
+  --font-size-body: var(--font-size-md);
+  --font-size-product-title: var(--font-size-md);
+  --font-size-product-price: var(--font-size-lg);
+  --font-size-section-title: var(--font-size-2xl);
 }

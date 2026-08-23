@@ -1,11 +1,12 @@
 /*
  * Índice principal de estilos de la app web.
- * Orden: tokens primitivos -> temas (semánticos) -> globals.
+ * Orden: tokens primitivos -> temas (semánticos) -> campañas (overrides) -> globals.
  */
 
 @import "./tokens/index.css";
 @import "./themes/light.css";
 @import "./themes/dark.css";
+@import "./themes/campaigns/index.css";
 @import "./globals/reset.css";
 @import "./globals/base.css";
 @import "./globals/utilities.css";
