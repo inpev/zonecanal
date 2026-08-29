@@ -1,0 +1,184 @@
+.card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 200px;
+  background: var(--color-gray-900);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* Bottom editorial scrim for legibility over photography */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(7, 42, 82, 0.82) 0%,
+    rgba(7, 42, 82, 0.45) 32%,
+    rgba(7, 42, 82, 0) 62%
+  );
+  pointer-events: none;
+}
+
+.tag {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  z-index: 2;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.22rem 0.5rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.85rem 0.9rem;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.arrow {
+  flex-shrink: 0;
+  color: var(--color-white);
+  transition: transform 0.2s ease;
+}
+
+.card:hover .arrow,
+.card:focus-visible .arrow {
+  transform: translateX(4px);
+}
+
+/* Editorial scale-ups for protagonist tiles */
+.card[data-variant="mosaic-large"] .title {
+  font-size: 1.6rem;
+}
+
+.card[data-variant="mosaic-tall"] .title {
+  font-size: 1.3rem;
+}
+
+.card[data-variant="mosaic-wide"] .title {
+  font-size: 1.2rem;
+}
+
+/* Solid blue ZoneCanal CTA card */
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+  padding: 1.25rem;
+  background: var(--color-primary);
+  border-color: transparent;
+}
+
+.ctaCard:hover {
+  background: var(--color-primary-hover);
+}
+
+.ctaCard:focus-visible {
+  outline: 3px solid var(--color-primary-active);
+  outline-offset: 2px;
+}
+
+.ctaIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--color-white);
+}
+
+.ctaTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.ctaText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-white);
+  opacity: 0.92;
+}
+
+.ctaArrow {
+  transition: transform 0.2s ease;
+}
+
+.ctaCard:hover .ctaArrow,
+.ctaCard:focus-visible .ctaArrow {
+  transform: translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .image,
+  .arrow,
+  .ctaArrow {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:focus-visible,
+  .ctaCard:hover,
+  .ctaCard:focus-visible {
+    transform: none;
+  }
+
+  .card:hover .image,
+  .card:hover .arrow,
+  .card:focus-visible .arrow,
+  .ctaCard:hover .ctaArrow,
+  .ctaCard:focus-visible .ctaArrow {
+    transform: none;
+  }
+}
